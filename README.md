@@ -24,8 +24,17 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitl
 ```
 
 Note: 
-The command above created the config file with Encoding UFT-16 LE and I wasn't able to run commitlint.
+The command above created the config file with Encoding UFT-16 LE. I was not able to execute commitlint with the file as UFT-16 LE.
 
+Some commands to test commitlint
+
+```sh
+# Should throw an error
+echo "test commit: this is a test commit" | npx commitlint
+
+# Will check your last commit
+npx commitlint --from HEAD~1 --to HEAD --verbose
+```
 
 ---
 
