@@ -79,3 +79,9 @@ npm install --save-dev commitizen
 # initialize the conventional changelog adapter
 npx commitizen init cz-conventional-changelog --save-dev --save-exact
 ```
+
+## [standard-version](https://github.com/conventional-changelog/standard-version)
+
+```
+npm i --save-dev standard-version
+```
