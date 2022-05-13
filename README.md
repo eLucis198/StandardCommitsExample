@@ -2,9 +2,11 @@
 
 ---
 
-* **Commitlint: Checks if the commit message meet the conventional commit format**
-* **Husky: To lint commits before they are created**
-* **Commitizen: When you commit, you'll be prompted to fill out any required commit fields at commit time.**
+<h1 align="center">STANDARD COMMITS</h1>
+
+* **[Commitlint](#Commitlint): Checks if the commit message meet the conventional commit format**
+* **[Husky](#Husky): To lint commits before they are created**
+* **[Commitizen](#Commitizen): When you commit, you'll be prompted to fill out any required commit fields at commit time**
 
 ---
 
@@ -49,23 +51,14 @@ npx commitlint --from HEAD~1 --to HEAD --verbose
 > To lint commits before they are created you can use Husky's `commit-msg` hook:
 
 ```
-# Install Husky v6
-npm install husky --save-dev
-# or
-yarn add husky --dev
+# Install Husky v7
+npm install husky@7.0.4 --save-dev
 
 # Active hooks
 npx husky install
-# or
-yarn husky install
 
 # Add hook
-cat <<EEE > .husky/commit-msg
-#!/bin/sh
-. "\$(dirname "\$0")/_/husky.sh"
-
-npx --no -- commitlint --edit "\${1}"
-EEE
+npx husky add .husky/commit-msg 'npx commitlint --edit $1'
 ```
 
 ## [Commitizen](https://github.com/commitizen/cz-cli)
@@ -78,4 +71,88 @@ npm install --save-dev commitizen
 
 # initialize the conventional changelog adapter
 npx commitizen init cz-conventional-changelog --save-dev --save-exact
+```
+
+```
+# This config should be on package.json
+"config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+```
+
+run `npx cz` innitiate the commit process with commitizen
+
+---
+
+<h1 align="center">CHANGELOG</h1>
+
+---
+
+* **[Standard-version](#Standard-version): Used to generate automatic CHANGELOG based on conventional commits**
+
+---
+
+## [standard-version](https://github.com/conventional-changelog/standard-version)
+
+> A utility for versioning using [semver](https://semver.org/) and CHANGELOG generation powered by [Conventional Commits](https://www.conventionalcommits.org/en/).
+
+```
+npm install standard-version --save-dev
+```
+
+Npm run script
+```
+{
+  "scripts": {
+    "release": "standard-version"
+  }
+}
+```
+
+The relation with semantical-commits is the following
+
+MAJOR => BRAKING CHANGE  
+MINOR => FEAT  
+PATCH => FIX  
+
+Some scripts
+
+```
+To run genereate changelog for first release
+npm run release -- --first-release
+
+To generate changelog
+npm run release
+
+Publish
+npm publish --tag next
+
+git push --follow-tags origin feat/testing-pipeline
+```
+
+If you want to control the version manually
+
+```
+# Pre-release | Generates version 1.0.1-0
+npm run release -- --prerelease
+
+# Specific name | Generates 1.0.1-alpha.0
+npm run release -- --prerelease alpha
+
+# Major | Bumps Major - 1.0.0 => 2.0.0
+npm run release -- --release-as major
+
+# Minor | Bumps Minor - 1.0.0 => 1.1.0
+npm run release -- --release-as minor
+
+# Patch | Bumps Patch - 1.0.0 => 1.0.1
+npm run release -- --release-as patch
+```
+
+If you use hooks, you can run the following to prevent hook from verifying the commit step
+
+```
+npm run release -- --no-verify
 ```
