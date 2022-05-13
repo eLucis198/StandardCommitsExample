@@ -1,0 +1,23 @@
+{
+  "name": "standardcommitsexample",
+  "version": "1.0.0",
+  "description": "This repo is a standard commits example.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eLucis198/StandardCommitsExample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eLucis198/StandardCommitsExample/issues"
+  },
+  "homepage": "https://github.com/eLucis198/StandardCommitsExample#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4"
+  }
+}
