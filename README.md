@@ -23,6 +23,8 @@ npm install --save-dev @commitlint/config-conventional @commitlint/cli
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
 ```
 
+Note: 
+The command above created the config file with Encoding UFT-16 LE and I wasn't able to run commitlint.
 
 
 ---
