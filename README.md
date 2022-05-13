@@ -1,1 +1,1 @@
-This is a standard commits example.
+This repo is a standard commits example.
