@@ -23,6 +23,8 @@ npm install --save-dev @commitlint/config-conventional @commitlint/cli
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
 ```
 
+
+
 ---
 
 ## [Husky](https://github.com/typicode/husky)
@@ -34,9 +36,4 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitl
 npm install husky --save-dev
 # or
 yarn add husky --dev
-
-# Activate hooks
-npx husky install
-# or
-yarn husky install
 ```
