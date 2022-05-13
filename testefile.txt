@@ -1,1 +1,3 @@
 this is a patch file
+
+test a minor update
