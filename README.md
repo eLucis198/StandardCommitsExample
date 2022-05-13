@@ -2,6 +2,12 @@
 
 ---
 
+* **Commitlint: Checks if the commit message meet the conventional commit format**
+* **Husky: To lint commits before they are created**
+* **Commitizen: When you commit, you'll be prompted to fill out any required commit fields at commit time.**
+
+---
+
 ## [Commitlint](https://github.com/conventional-changelog/commitlint/)
 
 > commitlint checks if your commit messages meet the [conventional commit format](https://conventionalcommits.org).
@@ -60,4 +66,16 @@ cat <<EEE > .husky/commit-msg
 
 npx --no -- commitlint --edit "\${1}"
 EEE
+```
+
+## [Commitizen](https://github.com/commitizen/cz-cli)
+
+> When you commit with Commitizen, you'll be prompted to fill out any required commit fields at commit time.
+
+```
+# Install commitizen
+npm install --save-dev commitizen
+
+# initialize the conventional changelog adapter
+npx commitizen init cz-conventional-changelog --save-dev --save-exact
 ```
