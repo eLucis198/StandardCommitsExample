@@ -18,12 +18,6 @@
   "homepage": "https://github.com/eLucis198/StandardCommitsExample#readme",
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
-    "@commitlint/config-conventional": "^16.2.4",
-    "husky": "^8.0.1"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY-GIT-PARAMS"
-    }
+    "@commitlint/config-conventional": "^16.2.4"
   }
 }
