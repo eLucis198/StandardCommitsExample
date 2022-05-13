@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/eLucis198/StandardCommitsExample/compare/v1.0.0...v1.0.1) (2022-05-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* git break
+
+### Features
+
+* add patch file ([3398ae1](https://github.com/eLucis198/StandardCommitsExample/commit/3398ae1d2a98e4d04fb988f4d73966bea2d5152b))
+* configure changelog ([ba1d3c5](https://github.com/eLucis198/StandardCommitsExample/commit/ba1d3c52904c8c9f929e894a632009513622d1a1))
+* testing feat ([67e832f](https://github.com/eLucis198/StandardCommitsExample/commit/67e832f7ea4165999247fdb31c22f2501672ecb8))
+
+
+### Bug Fixes
+
+* git break ([083a048](https://github.com/eLucis198/StandardCommitsExample/commit/083a0488592bc2cba86cf408be86c230a23d7f77))
+
 ## 1.0.0 (2022-05-13)
 
 
