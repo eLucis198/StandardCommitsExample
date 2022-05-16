@@ -4,7 +4,6 @@
   "description": "This repo is a standard commits example.",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install",
     "release": "standard-version",
     "release:minor": "standard-version --release-as minor",
     "release:patch": "standard-version --release-as patch",
@@ -25,7 +24,7 @@
     "@commitlint/config-conventional": "^16.2.4",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^8.0.1",
+    "husky": "^7.0.4",
     "standard-version": "^9.3.2"
   },
   "config": {

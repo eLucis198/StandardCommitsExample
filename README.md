@@ -49,15 +49,11 @@ npx commitlint --from HEAD~1 --to HEAD --verbose
 > To lint commits before they are created you can use Husky's `commit-msg` hook:
 
 ```
-# Install Husky v6
-npm install husky --save-dev
-# or
-yarn add husky --dev
+# Install Husky
+npm install husky@7.0.4 --save-dev
 
 # Active hooks
 npx husky install
-# or
-yarn husky install
 
 # Add hook
 cat <<EEE > .husky/commit-msg
