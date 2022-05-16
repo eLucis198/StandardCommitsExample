@@ -2,9 +2,11 @@
 
 ---
 
-* **Commitlint: Checks if the commit message meet the conventional commit format**
-* **Husky: To lint commits before they are created**
-* **Commitizen: When you commit, you'll be prompted to fill out any required commit fields at commit time.**
+<h1 align="center">STANDARD COMMITS</h1>
+
+* **[Commitlint](#Commitlint): Checks if the commit message meet the conventional commit format**
+* **[Husky](#Husky): To lint commits before they are created**
+* **[Commitizen](#Commitizen): When you commit, you'll be prompted to fill out any required commit fields at commit time**
 
 ---
 
@@ -71,8 +73,36 @@ npm install --save-dev commitizen
 npx commitizen init cz-conventional-changelog --save-dev --save-exact
 ```
 
+```
+# This config should be on package.json
+"config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+```
+
+run `npx cz` innitiate the commit process with commitizen
+
+---
+
+<h1 align="center">CHANGELOG</h1>
+
+---
+
+* **[Standard-version](#Standard-version): Used to generate automatic CHANGELOG based on conventional commits**
+
+---
+
 ## [standard-version](https://github.com/conventional-changelog/standard-version)
 
+> A utility for versioning using [semver](https://semver.org/) and CHANGELOG generation powered by [Conventional Commits](https://www.conventionalcommits.org/en/).
+
 ```
-npm i --save-dev standard-version
+npm install standard-version --save-dev
 ```
+
+
+
+
+
