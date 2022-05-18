@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/eLucis198/StandardCommitsExample/compare/v0.0.0...v0.1.0) (2022-05-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* add tests feat
+
+### Features
+
+* add tests feat ([33e23fb](https://github.com/eLucis198/StandardCommitsExample/commit/33e23fbb4ac4ae7ba5d6d80764a6a48d333d855b))
+
 ## [0.0.0](https://github.com/eLucis198/StandardCommitsExample/compare/v2.1.1...v0.0.0) (2022-05-18)
 
 
