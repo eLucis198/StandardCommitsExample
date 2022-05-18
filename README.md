@@ -128,6 +128,8 @@ npm run release
 
 Publish
 npm publish --tag next
+
+git push --follow-tags origin feat/testing-pipeline
 ```
 
 If you want to control the version manually
