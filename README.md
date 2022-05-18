@@ -102,7 +102,50 @@ run `npx cz` innitiate the commit process with commitizen
 npm install standard-version --save-dev
 ```
 
+Npm run script
+```
+{
+  "scripts": {
+    "release": "standard-version"
+  }
+}
+```
+
+The relation with semantical-commits is the following
+
+MAJOR => BRAKING CHANGE
+MINOR => FEAT
+PATCH => FIX
 
 
+Some scripts
 
+```
+To run genereate changelog for first release
+npm run release -- --first-release
 
+To generate changelog
+npm run release
+
+Publish
+npm publish --tag next
+```
+
+If you want to control the version manually
+
+```
+# Pre-release | Generates version 1.0.1-0
+npm run release -- --prerelease
+
+# Specific name | Generates 1.0.1-alpha.0
+npm run release -- --prerelease alpha
+
+# Major | Bumps Major - 1.0.0 => 2.0.0
+npm run release -- --release-as major
+
+# Minor | Bumps Minor - 1.0.0 => 1.1.0
+npm run release -- --release-as minor
+
+# Patch | Bumps Patch - 1.0.0 => 1.0.1
+npm run release -- --release-as patch
+```
