@@ -113,10 +113,9 @@ Npm run script
 
 The relation with semantical-commits is the following
 
-MAJOR => BRAKING CHANGE
-MINOR => FEAT
-PATCH => FIX
-
+MAJOR => BRAKING CHANGE  
+MINOR => FEAT  
+PATCH => FIX  
 
 Some scripts
 
@@ -148,4 +147,10 @@ npm run release -- --release-as minor
 
 # Patch | Bumps Patch - 1.0.0 => 1.0.1
 npm run release -- --release-as patch
+```
+
+If you use hooks, you can run the following to prevent hook from verifying the commit step
+
+```
+npm run release -- --no-verify
 ```
